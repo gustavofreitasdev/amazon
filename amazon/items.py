@@ -5,10 +5,22 @@
 # See documentation in:
 # http://doc.scrapy.org/en/latest/topics/items.html
 
-import scrapy
+from scrapy import Item, Field
 
+class BookItem(Item):
+    title = Field()
+    lang = Field() 
+    authors= Field()
+    year_pub = Field()
+    tradutor = Field()
+    description = Field()
+    pages = Field()
+    pub_house = Field()
+    details = Field()
+    price = Field()
+    price_ebook = Field()
+    images = Field()
+    status = Field()
 
-class AmazonItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+    andress_url = Field()
+    data_scraping = Field()
