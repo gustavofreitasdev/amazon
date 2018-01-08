@@ -67,6 +67,7 @@ DOWNLOAD_DELAY = 0.5
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
+    'amazon.pipelines.AmazonPipeline': 200,
     'amazon.pipelines.BooksPipeline': 300,
 }
 
