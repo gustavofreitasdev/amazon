@@ -6,12 +6,13 @@
 # http://doc.scrapy.org/en/latest/topics/items.html
 
 from scrapy import Item, Field
+from scrapy.loader.processors import TakeFirst
 
 class BookItem(Item):
     title = Field()
     lang = Field() 
     authors= Field()
-    year_pub = Field()
+    year_pub = Field(output_processor=TakeFirst())
     pages = Field()
     pub_house = Field()
     details = Field()
