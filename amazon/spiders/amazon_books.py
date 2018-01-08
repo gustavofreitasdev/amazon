@@ -35,7 +35,7 @@ class AmazonBooksSpider(Spider):
         book.add_xpath('pages', "//div[@class='content']//li[1]/text()", re=r"\d+")
         book.add_xpath('pub_house', "//div[@class='content']//li[2]/text()", re=r"(\w+);")
        #book.add_xpath('details', "//div[@class='content']")
-        book.add_xpath('price', "//div[@id='soldByThirdParty']/span/text()", re=r"\d+,\d+")
+        book.add_xpath('price', "//div[@id='soldByThirdParty']/span/text()")
         book.add_xpath('images', "//div[@id='main-image-container']//img/@src")
 
         book.add_value('andress_url', response.url)
