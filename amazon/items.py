@@ -12,13 +12,11 @@ class BookItem(Item):
     lang = Field() 
     authors= Field()
     year_pub = Field()
-    description = Field()
     pages = Field()
     pub_house = Field()
     details = Field()
     price = Field()
     images = Field()
-    status = Field()
 
     andress_url = Field()
     data_scraping = Field()
