@@ -17,18 +17,17 @@ class AmazonPipeline(object):
             item['date_scraping'] = item['date_scraping'].strftime(r"%d/%m/%Y")
         return item
 
-
 class BooksPipeline(object):
     months = {
         'jan': '01',
         'fev': '02',
         'mar': '03',
-        'apr': '04',
-        'may': '05',
+        'abr': '04',
+        'mai': '05',
         'jun': '06',
         'jul': '07',
         'ago': '08',
-        'sep': '09',
+        'set': '09',
         'out': '10',
         'nov': '11',
         'dez': '12'
