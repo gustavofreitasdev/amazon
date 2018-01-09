@@ -6,7 +6,7 @@
 # http://doc.scrapy.org/en/latest/topics/items.html
 
 from scrapy import Item, Field
-from scrapy.loader.processors import TakeFirst
+from scrapy.loader.processors import TakeFirst, Join
 
 class BookItem(Item):
     title = Field(output_processor=TakeFirst())
@@ -15,7 +15,7 @@ class BookItem(Item):
     year_pub = Field(output_processor=TakeFirst())
     pages = Field(output_processor=TakeFirst())
     pub_house = Field(output_processor=TakeFirst())
-    details = Field()
+    details = Field(output_processor=Join())
     price = Field(output_processor=TakeFirst())
     images = Field()
 
