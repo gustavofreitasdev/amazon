@@ -18,6 +18,9 @@ class BookItem(Item):
     details = Field(output_processor=Join())
     price = Field(output_processor=TakeFirst())
     images = Field()
+    edition = Field(output_processor=TakeFirst())
+    rating = Field(output_processor=TakeFirst())
+    rating_count = Field(output_processor=TakeFirst())
 
     andress_url = Field(output_processor=TakeFirst())
     date_scraping = Field(output_processor=TakeFirst())

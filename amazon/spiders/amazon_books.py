@@ -35,6 +35,9 @@ class AmazonBooksSpider(Spider):
         book.add_xpath('details', "normalize-space(.//div[@class='content'])")
         book.add_xpath('price', "//div[@id='soldByThirdParty']/span/text()")
         book.add_xpath('images', "//div[@id='main-image-container']//img/@src")
+        book.add_xpath('edition', "normalize-space(.//div[@class='content'])", re=r"Edição:([\w \d]+)\(")
+        book.add_xpath('rating', "normalize-space(.//div[@class='content'])", re=r"(\d.\d) de 5")
+        book.add_xpath('rating_count', "//span[@id='acrCustomerReviewText']/text()", re=r"\d+")
 
         book.add_value('andress_url', response.url)
         book.add_value('date_scraping', datetime.now())
